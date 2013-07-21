@@ -1,3 +1,61 @@
-Hello!
+\documentclass{amsart}
+\usepackage{pifont,latexsym,ifthen,amsthm,calc,amsfonts,amssymb,amsbsy,amsmath}
+\usepackage[square,comma]{natbib}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\brac}[1]{\left( #1\right)}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\ffield}{\mathbb{F}_q(\!(t^{-1})\!)}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
 
-Testing again.
+\begin{document}
+
+\title{Distinct distances in function fields}
+
+\author{Thomas F. Bloom and Timothy G. F. Jones}
+
+\begin{abstract}
+We will prove a lower bound for the number of distinct distances in function fields.
+\end{abstract}  
+
+\maketitle
+\tableofcontents
+
+Everything should happen in this document for clarity. If you have a hairbrained idea, want to start a new discussion, or anything like, add a new section. 
+
+Let's not bother with the PDF updates - I assume we can both compile the \LaTeX file ourselves without much effort.
+
+\section{Aims}
+We hope to prove a lower bound for the number of distinct distances in $\ffield$ by adapting the proof of Szekeley.
+
+\section{Definitions and notation}
+We just work with the one-dimensional case for now. Fix a prime power $q=p^r$ and the completion of the function field $\ffield$. We consider a finite set $P\subset\ffield$. The non-archimedean norm is defined by $\abs{x}=q^{\deg(x)}$. The distance between two points is $\abs{x-y}$. The set of distinct distances between elements of $P$ is
+\[D(P)=\{ \abs{x-y} : (x,y)\in P^2\}.\]
+For brevity let $d(P)=\abs{D(P)}$. 
+
+A balls is a set of the form
+  \[B(x,r)=\left\{y \in \ffield : \norm{x-y}\leq r\right\}.\]
+We will call $r\in\mathbb{R}$ the radius of the ball $B(x,r)$. The following lemma will be useful.
+
+\begin{lemma}\label{theorem:nonarchball}
+If $B_1$ and $B_2$ are balls in $\ffield$ then either they are disjoint, or $B_1 \subset B_2$, or $B_2 \subset B_1$. If in addition $B_1$ and $B_2$ have the same radius then either they are disjoint or $B_1=B_2$.
+\end{lemma}
+
+A finite set $A \subset \ffield$ is {\em separable} if its elements can be indexed as
+	\[A=\left\{a_1,\ldots,a_{|A|}\right\}\]
+in such a way that for each $1 \leq j \leq |A|$ there is a ball $B_j$ with 
+	\[A \cap B_j =\left\{a_1,\ldots,a_j\right\}.\] 
+	
+\section{Proof sketch}
+A sketch will go here and be built upon. Tim should copy his latex file into this section.
+
+\subsection{Lower bounds}
+
+\subsection{Upper bounds}
+
+\section{Applications}
+A linear code of length $n$ and rank $k$ is a linear subspace $C\leq \mathbb{F}_q^n$ of dimension $k$. The distance $d$ of a linear code is the minimum distance between distinct codewords. This is the Hamming distance, i.e. the number of elements in which they differ (focus on $q=2$ for now). 
+
+An $[n,k,d]$ code is a linear code of length $n$, dimension $k$ and distance $d$.
+\end{document}
